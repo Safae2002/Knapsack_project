@@ -1,0 +1,10 @@
+Méthode,Type,Valeur moyenne,Temps moyen (ms),Taux optimal (%),Gap moyen (%)
+Complete_DP,Complète,18850 ± 7606,1616 ± 1335,100.0%,0.00%
+Complete_MIP_ORTools,Complète,117877 ± 139856,20270 ± 76646,93.3%,0.00%
+Complete_MIP_PuLP,Complète,25268 ± 10480,176 ± 127,100.0%,0.00%
+Incomplete_GeneticAlgorithm,Incomplète,146534 ± 120537,3462 ± 2779,10.0%,7.98%
+Incomplete_Greedy_Probabilistic_alpha0.9,Incomplète,106321 ± 125135,239 ± 379,6.7%,9.51%
+Incomplete_Greedy_Random_k3,Incomplète,117775 ± 139898,226 ± 389,86.7%,0.41%
+Incomplete_Greedy_Simple,Incomplète,117812 ± 139883,2 ± 3,93.3%,0.25%
+Incomplete_SimulatedAnnealing,Incomplète,117854 ± 139854,2547 ± 2458,100.0%,0.06%
+Incomplete_TabuSearch,Incomplète,117827 ± 139874,103503 ± 141554,93.3%,0.19%

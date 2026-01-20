@@ -1,0 +1,240 @@
+
+        <!DOCTYPE html>
+        <html lang="fr">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Rapport d'analyse - Problème du sac à dos</title>
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+            <style>
+                body { padding: 20px; background-color: #f8f9fa; }
+                .header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 30px; border-radius: 10px; margin-bottom: 30px; }
+                .card { margin-bottom: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+                .table { background-color: white; }
+                .stat-card { text-align: center; padding: 20px; }
+                .stat-value { font-size: 2.5rem; font-weight: bold; color: #667eea; }
+                .stat-label { color: #6c757d; text-transform: uppercase; font-size: 0.9rem; }
+                .plot-img { width: 100%; border-radius: 5px; margin: 10px 0; }
+            </style>
+        </head>
+        <body>
+            <div class="container">
+                <div class="header">
+                    <h1>📊 Rapport d'analyse - Problème du sac à dos</h1>
+                    <p class="lead">Comparaison des méthodes complètes et incomplètes</p>
+                </div>
+                
+                <div class="row mb-4">
+                    <div class="col-md-3">
+                        <div class="card stat-card">
+                            <div class="stat-value">140</div>
+                            <div class="stat-label">Résultats</div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card stat-card">
+                            <div class="stat-value">20</div>
+                            <div class="stat-label">Instances</div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card stat-card">
+                            <div class="stat-value">7</div>
+                            <div class="stat-label">Méthodes</div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card stat-card">
+                            <div class="stat-value">1</div>
+                            <div class="stat-label">Niveaux de difficulté</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="mb-0">📋 Tableau comparatif des méthodes</h5>
+                    </div>
+                    <div class="card-body">
+                        <table border="1" class="dataframe table table-striped">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Méthode</th>
+      <th>Type</th>
+      <th>Valeur moyenne</th>
+      <th>Temps moyen (ms)</th>
+      <th>Taux optimal (%)</th>
+      <th>Gap moyen (%)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Complete_MIP_ORTools</td>
+      <td>Complète</td>
+      <td>19897 ± 1444</td>
+      <td>26 ± 20</td>
+      <td>100.0%</td>
+      <td>-1.00%</td>
+    </tr>
+    <tr>
+      <td>Complete_MIP_PuLP</td>
+      <td>Complète</td>
+      <td>19897 ± 1444</td>
+      <td>85 ± 55</td>
+      <td>100.0%</td>
+      <td>0.00%</td>
+    </tr>
+    <tr>
+      <td>Incomplete_Greedy_Simple</td>
+      <td>Incomplète</td>
+      <td>19854 ± 1464</td>
+      <td>0 ± 0</td>
+      <td>0.0%</td>
+      <td>0.23%</td>
+    </tr>
+    <tr>
+      <td>Incomplete_Greedy_Random_k3</td>
+      <td>Incomplète</td>
+      <td>19673 ± 1439</td>
+      <td>1 ± 1</td>
+      <td>0.0%</td>
+      <td>1.13%</td>
+    </tr>
+    <tr>
+      <td>Incomplete_Greedy_Probabilistic_alpha0.9</td>
+      <td>Incomplète</td>
+      <td>17480 ± 1447</td>
+      <td>2 ± 1</td>
+      <td>0.0%</td>
+      <td>12.14%</td>
+    </tr>
+    <tr>
+      <td>Incomplete_SimulatedAnnealing</td>
+      <td>Incomplète</td>
+      <td>19892 ± 1413</td>
+      <td>296 ± 71</td>
+      <td>0.0%</td>
+      <td>0.01%</td>
+    </tr>
+    <tr>
+      <td>Incomplete_TabuSearch</td>
+      <td>Incomplète</td>
+      <td>19868 ± 1451</td>
+      <td>943 ± 145</td>
+      <td>0.0%</td>
+      <td>0.15%</td>
+    </tr>
+  </tbody>
+</table>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-header bg-success text-white">
+                                <h5 class="mb-0">🏆 Meilleures méthodes par critère</h5>
+                            </div>
+                            <div class="card-body">
+                                <ul class="list-group">
+                                    
+                                        
+                                        <li class="list-group-item">
+                                            <strong>Meilleure précision:</strong> Complete_MIP_ORTools (gap: -1.00%)
+                                        </li>
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                    
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                        <li class="list-group-item">
+                                            <strong>Plus rapide:</strong> Incomplete_Greedy_Simple (0ms)
+                                        </li>
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                    
+                                    
+                                        
+                                        <li class="list-group-item">
+                                            <strong>Meilleur taux d'optimalité:</strong> Complete_MIP_ORTools (100.0%)
+                                        </li>
+                                        
+                                    
+                                        
+                                        <li class="list-group-item">
+                                            <strong>Meilleur taux d'optimalité:</strong> Complete_MIP_PuLP (100.0%)
+                                        </li>
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-header bg-info text-white">
+                                <h5 class="mb-0">📈 Visualisations disponibles</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="list-group">
+                                    <a href="plots/time_vs_size.png" class="list-group-item list-group-item-action" target="_blank">
+                                        Temps d'exécution vs Taille
+                                    </a>
+                                    <a href="plots/value_vs_size.png" class="list-group-item list-group-item-action" target="_blank">
+                                        Qualité de solution vs Taille
+                                    </a>
+                                    <a href="plots/optimality_gap.png" class="list-group-item list-group-item-action" target="_blank">
+                                        Gap d'optimalité
+                                    </a>
+                                    <a href="plots/performance_by_difficulty.png" class="list-group-item list-group-item-action" target="_blank">
+                                        Performance par difficulté
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-4 text-center text-muted">
+                    <hr>
+                    <p>Généré automatiquement par Knapsack Solver • 17/01/2026 19:23</p>
+                </div>
+            </div>
+        </body>
+        </html>
+        

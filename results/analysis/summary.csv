@@ -1,0 +1,10 @@
+Method,Mean Value,Mean Time (ms),Mean Gap (%),Timeouts
+Incomplete_Greedy_Simple,117812.0667,1.3812,0.2521,0
+Complete_MIP_PuLP,25267.75,132.6675,-0.0005,0
+Incomplete_Greedy_Random_k3,117774.5333,191.7045,0.4093,0
+Incomplete_Greedy_Probabilistic_alpha0.9,106320.6333,229.8343,9.5136,0
+Complete_DP,18850.0,890.8392,0.0,0
+Incomplete_GeneticAlgorithm,146534.05,3358.9978,7.9773,0
+Complete_MIP_ORTools,117876.6667,20209.8534,0.0,2
+Incomplete_SimulatedAnnealing,124152.9667,101213.4579,-4.6564,10
+Incomplete_TabuSearch,117826.6,102258.3231,0.186,10
